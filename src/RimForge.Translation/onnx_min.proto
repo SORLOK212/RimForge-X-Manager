@@ -1,0 +1,41 @@
+// The few parts of the ONNX model format RimForge edits (field numbers as in onnx.proto).
+// Everything not listed here is kept as is when the model is read and written back.
+syntax = "proto2";
+
+package rimforge.onnx;
+
+option csharp_namespace = "RimForge.Translation.Onnx";
+
+message AttributeProto {
+  optional string name = 1;
+  optional int64 i = 3;
+  optional GraphProto g = 6;
+  repeated int64 ints = 8;
+  optional int32 type = 20;
+}
+
+message NodeProto {
+  repeated string input = 1;
+  repeated string output = 2;
+  optional string name = 3;
+  optional string op_type = 4;
+  repeated AttributeProto attribute = 5;
+  optional string domain = 7;
+}
+
+message TensorProto {
+  repeated int64 dims = 1;
+  optional int32 data_type = 2;
+  optional string name = 8;
+  optional bytes raw_data = 9;
+}
+
+message GraphProto {
+  repeated NodeProto node = 1;
+  optional string name = 2;
+  repeated TensorProto initializer = 5;
+}
+
+message ModelProto {
+  optional GraphProto graph = 7;
+}

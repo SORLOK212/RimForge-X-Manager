@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>RimForge.Steam</RootNamespace>
+    <!-- Facepunch.Steamworks targets netstandard2.0, which is fine here. -->
+    <NoWarn>$(NoWarn);NU1701</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="RimForge.Core.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Facepunch.Steamworks" Version="2.3.3" GeneratePathProperty="true" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RimForge.Core\RimForge.Core.csproj" />
+  </ItemGroup>
+  <!-- Valve's steam_api64.dll ships in the package's "content" folder, which SDK projects ignore. -->
+  <ItemGroup>
+    <None Include="$(PkgFacepunch_Steamworks)\content\steam_api64.dll" Link="steam_api64.dll"
+          CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" Visible="false" />
+  </ItemGroup>
+</Project>

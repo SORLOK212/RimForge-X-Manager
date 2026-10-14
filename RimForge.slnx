@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RimForge.App/RimForge.App.csproj" />
+    <Project Path="src/RimForge.Core/RimForge.Core.csproj" />
+    <Project Path="src/RimForge.Mcp/RimForge.Mcp.csproj" />
+    <Project Path="src/RimForge.Steam/RimForge.Steam.csproj" />
+    <Project Path="src/RimForge.Translation/RimForge.Translation.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/RimForge.Core.Tests/RimForge.Core.Tests.csproj" />
+  </Folder>
+</Solution>

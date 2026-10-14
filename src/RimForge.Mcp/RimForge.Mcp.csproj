@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>RimForge.Mcp</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="RimForge.Core.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RimForge.Core\RimForge.Core.csproj" />
+    <ProjectReference Include="..\RimForge.Steam\RimForge.Steam.csproj" />
+  </ItemGroup>
+</Project>

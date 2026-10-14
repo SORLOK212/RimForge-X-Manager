@@ -1,0 +1,358 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <Style Selector="Window">
+    <Setter Property="Background" Value="{StaticResource BgBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
+    <Setter Property="FontSize" Value="13" />
+  </Style>
+
+  <!-- Panels -->
+  <Style Selector="Border.panel">
+    <Setter Property="Background" Value="{StaticResource PanelBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="4" />
+  </Style>
+  <Style Selector=":is(TextBlock).h1">
+    <Setter Property="FontSize" Value="18" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+  </Style>
+  <Style Selector=":is(TextBlock).h2">
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+  </Style>
+  <Style Selector="TextBlock.muted">
+    <Setter Property="Foreground" Value="{StaticResource TextMutedBrush}" />
+  </Style>
+  <Style Selector="TextBlock.faint">
+    <Setter Property="Foreground" Value="{StaticResource TextFaintBrush}" />
+  </Style>
+  <Style Selector="TextBlock.icon">
+    <Setter Property="FontFamily" Value="{StaticResource IconFont}" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+  </Style>
+  <Style Selector="TextBlock.ok"><Setter Property="Foreground" Value="{StaticResource OkBrush}" /></Style>
+  <Style Selector="TextBlock.warn"><Setter Property="Foreground" Value="{StaticResource WarnBrush}" /></Style>
+  <Style Selector="TextBlock.error"><Setter Property="Foreground" Value="{StaticResource ErrorBrush}" /></Style>
+
+  <!-- Buttons: dark with a thin frame, like the game's menu buttons -->
+  <Style Selector="Button">
+    <Setter Property="Background" Value="{StaticResource PanelRaisedBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource BorderStrongBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="3" />
+    <Setter Property="Padding" Value="12,6" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{StaticResource HoverBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
+  </Style>
+  <Style Selector="Button:pressed /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{StaticResource SelectionBrush}" />
+  </Style>
+  <Style Selector="Button:disabled /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{StaticResource PanelBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource TextFaintBrush}" />
+  </Style>
+
+  <Style Selector="Button.accent">
+    <Setter Property="Background" Value="{StaticResource AccentBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource AccentTextBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource AccentHoverBrush}" />
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+  <Style Selector="Button.accent:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{StaticResource AccentHoverBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource AccentTextBrush}" />
+  </Style>
+
+  <Style Selector="Button.flat">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+    <Setter Property="Padding" Value="6" />
+  </Style>
+
+  <Style Selector="Button.accent.danger">
+    <Setter Property="Background" Value="{StaticResource ErrorBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource ErrorBrush}" />
+    <Setter Property="Foreground" Value="White" />
+  </Style>
+  <Style Selector="Button.accent.danger:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="#E06A50" />
+    <Setter Property="Foreground" Value="White" />
+  </Style>
+
+  <Style Selector="Border.panel.activeCard">
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+    <Setter Property="BorderThickness" Value="1.5" />
+  </Style>
+
+  <Style Selector="Button.nav">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+    <Setter Property="Width" Value="48" />
+    <Setter Property="Height" Value="48" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="Padding" Value="0" />
+  </Style>
+  <Style Selector="Button.nav-tab">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+    <Setter Property="Padding" Value="14,6" />
+  </Style>
+  <Style Selector="Button.nav-tab.current">
+    <Setter Property="Background" Value="{StaticResource SelectionBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+  </Style>
+  <Style Selector="Button.nav.current">
+    <Setter Property="Background" Value="{StaticResource SelectionBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+  </Style>
+
+  <!-- Downloads: the Workshop button glows, marks pulse, the strip turns amber while everything waits -->
+  <Style Selector="Button.nav.downloading">
+    <Setter Property="BorderBrush" Value="{StaticResource DownloadBrush}" />
+  </Style>
+  <Style Selector=":is(Control).pulse">
+    <Style.Animations>
+      <Animation Duration="0:0:1.2" IterationCount="Infinite" PlaybackDirection="Alternate">
+        <KeyFrame Cue="0%">
+          <Setter Property="Opacity" Value="1" />
+        </KeyFrame>
+        <KeyFrame Cue="100%">
+          <Setter Property="Opacity" Value="0.35" />
+        </KeyFrame>
+      </Animation>
+    </Style.Animations>
+  </Style>
+  <Style Selector="ProgressBar.download">
+    <Setter Property="Foreground" Value="{StaticResource DownloadBrush}" />
+    <Setter Property="Background" Value="{StaticResource DownloadTintBrush}" />
+    <Setter Property="MinWidth" Value="0" />
+    <Setter Property="CornerRadius" Value="0" />
+  </Style>
+  <Style Selector="ProgressBar.download.stalled">
+    <Setter Property="Foreground" Value="{StaticResource WarnBrush}" />
+  </Style>
+
+  <!-- Startup breakdown: a guessed time is drawn paler than a measured one -->
+  <Style Selector="ProgressBar.guess">
+    <Setter Property="Opacity" Value="0.45" />
+  </Style>
+
+  <!-- Galleries: round arrows over the picture, the current thumbnail framed -->
+  <!-- A click target over a picture: no hover tint, no border -->
+  <Style Selector="Button.clickArea">
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Border Background="Transparent" />
+      </ControlTemplate>
+    </Setter>
+  </Style>
+  <Style Selector="Button.galleryArrow">
+    <Setter Property="Background" Value="#B0000000" />
+    <Setter Property="Foreground" Value="White" />
+    <Setter Property="Width" Value="34" />
+    <Setter Property="Height" Value="34" />
+    <Setter Property="CornerRadius" Value="17" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style Selector="Button.galleryArrow.big">
+    <Setter Property="Width" Value="56" />
+    <Setter Property="Height" Value="56" />
+    <Setter Property="CornerRadius" Value="28" />
+  </Style>
+  <Style Selector="Border.currentThumb">
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+  </Style>
+
+  <!-- A splitter between panels: invisible until hovered, with a small grip in the middle -->
+  <Style Selector="GridSplitter.panelSplit">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="MinWidth" Value="0" />
+    <Setter Property="Cursor" Value="SizeWestEast" />
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Panel Background="Transparent">
+          <Border x:Name="line" Width="2" Margin="0,10" CornerRadius="1" HorizontalAlignment="Center" Background="Transparent" />
+          <Border x:Name="grip" Width="4" Height="36" CornerRadius="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                  Background="{StaticResource BorderStrongBrush}" />
+        </Panel>
+      </ControlTemplate>
+    </Setter>
+  </Style>
+  <Style Selector="GridSplitter.panelSplit:pointerover /template/ Border#line, GridSplitter.panelSplit:pressed /template/ Border#line">
+    <Setter Property="Background" Value="{StaticResource AccentBrush}" />
+  </Style>
+  <Style Selector="GridSplitter.panelSplit:pointerover /template/ Border#grip, GridSplitter.panelSplit:pressed /template/ Border#grip">
+    <Setter Property="Background" Value="{StaticResource AccentBrush}" />
+  </Style>
+
+  <!-- Inputs -->
+  <Style Selector="TextBox">
+    <Setter Property="Background" Value="{StaticResource BgBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource BorderStrongBrush}" />
+    <Setter Property="CornerRadius" Value="3" />
+  </Style>
+  <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+    <Setter Property="Background" Value="{StaticResource BgBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+  </Style>
+  <Style Selector="TextBox:pointerover /template/ Border#PART_BorderElement">
+    <Setter Property="Background" Value="{StaticResource BgBrush}" />
+  </Style>
+
+  <!-- Mod lists -->
+  <Style Selector="ListBox">
+    <Setter Property="Background" Value="Transparent" />
+  </Style>
+  <Style Selector="ListBoxItem">
+    <Setter Property="Padding" Value="8,4" />
+    <Setter Property="MinHeight" Value="0" />
+    <Setter Property="BorderThickness" Value="0,2,0,2" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+  </Style>
+  <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{StaticResource HoverBrush}" />
+  </Style>
+  <Style Selector="ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{StaticResource SelectionBrush}" />
+  </Style>
+  <Style Selector="ListBoxItem:selected:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{StaticResource SelectionBrush}" />
+  </Style>
+  <!-- Drop position markers while dragging -->
+  <Style Selector="ListBoxItem.dropAbove">
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+    <Setter Property="BorderThickness" Value="0,2,0,0" />
+  </Style>
+  <Style Selector="ListBoxItem.dropBelow">
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+    <Setter Property="BorderThickness" Value="0,0,0,2" />
+  </Style>
+  <Style Selector="ListBox.dropTarget">
+    <Setter Property="Background" Value="#10D4A24C" />
+  </Style>
+
+  <!-- Workshop cards -->
+  <Style Selector="ListBox.cards ListBoxItem">
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="Margin" Value="0,0,12,12" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+    <Setter Property="CornerRadius" Value="4" />
+    <Setter Property="ClipToBounds" Value="True" />
+    <Setter Property="Background" Value="{StaticResource PanelBrush}" />
+    <Setter Property="Cursor" Value="Hand" />
+  </Style>
+  <Style Selector="ListBox.cards ListBoxItem /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="CornerRadius" Value="4" />
+  </Style>
+  <Style Selector="ListBox.cards ListBoxItem:pointerover">
+    <Setter Property="BorderBrush" Value="{StaticResource BorderStrongBrush}" />
+  </Style>
+  <Style Selector="ListBox.cards ListBoxItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{StaticResource PanelRaisedBrush}" />
+  </Style>
+  <Style Selector="ListBox.cards ListBoxItem:selected">
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+  </Style>
+  <Style Selector="ListBox.cards ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{StaticResource PanelRaisedBrush}" />
+  </Style>
+
+  <!-- Selection tiles -->
+  <Style Selector="Button.tile">
+    <Setter Property="Margin" Value="0,0,8,8" />
+    <Setter Property="Padding" Value="14,9" />
+    <Setter Property="MinWidth" Value="150" />
+  </Style>
+  <Style Selector="Button.tile.current">
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+    <Setter Property="Background" Value="{StaticResource SelectionBrush}" />
+  </Style>
+
+  <!-- Toggle chips in drop-downs -->
+  <!-- 文A on the auto-translate switch: accent when off, dark on the accent background when on -->
+  <Style Selector="TextBlock.trGlyph">
+    <Setter Property="Foreground" Value="{StaticResource AccentBrush}" />
+  </Style>
+  <Style Selector="ToggleButton:checked TextBlock.trGlyph">
+    <Setter Property="Foreground" Value="{StaticResource AccentTextBrush}" />
+  </Style>
+
+  <Style Selector="ToggleButton.chip">
+    <Setter Property="Margin" Value="0,0,6,6" />
+    <Setter Property="Padding" Value="10,4" />
+    <Setter Property="FontSize" Value="12.5" />
+    <Setter Property="CornerRadius" Value="12" />
+  </Style>
+  <Style Selector="ToggleButton.chip:checked /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="Background" Value="{StaticResource SelectionBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
+  </Style>
+  <Style Selector="Button.accentBorder">
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+  </Style>
+  <!-- Category labels on a mod card -->
+  <Style Selector="Border.tag">
+    <Setter Property="CornerRadius" Value="10" />
+    <Setter Property="Padding" Value="8,1,2,1" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="BorderBrush" Value="{StaticResource BorderStrongBrush}" />
+    <Setter Property="Background" Value="{StaticResource BgBrush}" />
+  </Style>
+  <Style Selector="Border.tag.manual">
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+  </Style>
+
+  <!-- Small colored labels -->
+  <Style Selector="Border.badge">
+    <Setter Property="CornerRadius" Value="3" />
+    <Setter Property="Padding" Value="5,1" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+  </Style>
+  <Style Selector="Border.badge > TextBlock">
+    <Setter Property="FontSize" Value="10" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+  </Style>
+
+  <!-- Tooltips: readable, a bit wider -->
+  <Style Selector="ToolTip">
+    <Setter Property="Background" Value="{StaticResource PanelRaisedBrush}" />
+    <Setter Property="Foreground" Value="{StaticResource TextBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="MaxWidth" Value="380" />
+    <Setter Property="Padding" Value="10,8" />
+    <Setter Property="FontSize" Value="12.5" />
+  </Style>
+
+  <Style Selector="FlyoutPresenter">
+    <Setter Property="Background" Value="{StaticResource PanelRaisedBrush}" />
+    <Setter Property="BorderBrush" Value="{StaticResource BorderStrongBrush}" />
+    <Setter Property="MaxWidth" Value="560" />
+    <Setter Property="MaxHeight" Value="520" />
+    <Setter Property="Padding" Value="12" />
+  </Style>
+
+  <Style Selector="ScrollBar">
+    <Setter Property="Opacity" Value="0.8" />
+  </Style>
+  <!-- An AI app that is not installed on this PC. -->
+  <Style Selector="Border.notFound">
+    <Setter Property="Opacity" Value="0.55" />
+  </Style>
+</Styles>

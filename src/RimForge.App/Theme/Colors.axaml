@@ -1,0 +1,70 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!--
+    RimForge palette: dark slate panels with thin borders and warm parchment text,
+    a nod to RimWorld's menus without copying them.
+  -->
+  <Color x:Key="BgColor">#15171A</Color>
+  <Color x:Key="PanelColor">#1D2024</Color>
+  <Color x:Key="PanelRaisedColor">#252930</Color>
+  <Color x:Key="HoverColor">#2E333A</Color>
+  <Color x:Key="BorderColor">#383D45</Color>
+  <Color x:Key="BorderStrongColor">#4C525C</Color>
+  <Color x:Key="TextColor">#E8E2D4</Color>
+  <Color x:Key="TextMutedColor">#9C978C</Color>
+  <Color x:Key="TextFaintColor">#6C6860</Color>
+  <Color x:Key="AccentColor">#D4A24C</Color>
+  <Color x:Key="AccentHoverColor">#E3B868</Color>
+  <Color x:Key="AccentTextColor">#1A1408</Color>
+  <Color x:Key="SelectionColor">#3A3222</Color>
+  <Color x:Key="OkColor">#71B062</Color>
+  <Color x:Key="WarnColor">#D9B24A</Color>
+  <Color x:Key="ErrorColor">#D0583F</Color>
+  <Color x:Key="WorkshopColor">#5B8DB8</Color>
+  <Color x:Key="LocalColor">#9A7FC0</Color>
+  <Color x:Key="OfficialColor">#C9A35A</Color>
+  <!-- Mods on their way down from the Workshop: one colour everywhere (strip, footer, rows, the Workshop button) -->
+  <Color x:Key="DownloadColor">#3DB4F2</Color>
+
+  <SolidColorBrush x:Key="BgBrush" Color="{StaticResource BgColor}" />
+  <SolidColorBrush x:Key="PanelBrush" Color="{StaticResource PanelColor}" />
+  <SolidColorBrush x:Key="PanelRaisedBrush" Color="{StaticResource PanelRaisedColor}" />
+  <SolidColorBrush x:Key="HoverBrush" Color="{StaticResource HoverColor}" />
+  <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}" />
+  <SolidColorBrush x:Key="BorderStrongBrush" Color="{StaticResource BorderStrongColor}" />
+  <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}" />
+  <SolidColorBrush x:Key="TextMutedBrush" Color="{StaticResource TextMutedColor}" />
+  <SolidColorBrush x:Key="TextFaintBrush" Color="{StaticResource TextFaintColor}" />
+  <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource AccentColor}" />
+  <SolidColorBrush x:Key="AccentHoverBrush" Color="{StaticResource AccentHoverColor}" />
+  <SolidColorBrush x:Key="AccentTextBrush" Color="{StaticResource AccentTextColor}" />
+  <SolidColorBrush x:Key="SelectionBrush" Color="{StaticResource SelectionColor}" />
+  <SolidColorBrush x:Key="OkBrush" Color="{StaticResource OkColor}" />
+  <SolidColorBrush x:Key="WarnBrush" Color="{StaticResource WarnColor}" />
+  <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource ErrorColor}" />
+  <SolidColorBrush x:Key="WorkshopBrush" Color="{StaticResource WorkshopColor}" />
+  <SolidColorBrush x:Key="LocalBrush" Color="{StaticResource LocalColor}" />
+  <SolidColorBrush x:Key="OfficialBrush" Color="{StaticResource OfficialColor}" />
+  <SolidColorBrush x:Key="DownloadBrush" Color="{StaticResource DownloadColor}" />
+  <SolidColorBrush x:Key="DownloadTintBrush" Color="#263DB4F2" />
+
+  <!-- Replace Fluent's system blue with our amber everywhere (focus rings, combo boxes, accent buttons). -->
+  <Color x:Key="SystemAccentColor">#D4A24C</Color>
+  <Color x:Key="SystemAccentColorDark1">#B98A3A</Color>
+  <Color x:Key="SystemAccentColorDark2">#9C732E</Color>
+  <Color x:Key="SystemAccentColorDark3">#7C5B23</Color>
+  <Color x:Key="SystemAccentColorLight1">#E3B868</Color>
+  <Color x:Key="SystemAccentColorLight2">#EBC985</Color>
+  <Color x:Key="SystemAccentColorLight3">#F2DAA6</Color>
+  <SolidColorBrush x:Key="AccentButtonBackground" Color="{StaticResource AccentColor}" />
+  <SolidColorBrush x:Key="AccentButtonBackgroundPointerOver" Color="{StaticResource AccentHoverColor}" />
+  <SolidColorBrush x:Key="AccentButtonBackgroundPressed" Color="#B98A3A" />
+  <SolidColorBrush x:Key="AccentButtonForeground" Color="{StaticResource AccentTextColor}" />
+  <SolidColorBrush x:Key="AccentButtonForegroundPointerOver" Color="{StaticResource AccentTextColor}" />
+  <SolidColorBrush x:Key="AccentButtonForegroundPressed" Color="{StaticResource AccentTextColor}" />
+  <SolidColorBrush x:Key="AccentButtonBorderBrush" Color="{StaticResource AccentHoverColor}" />
+  <SolidColorBrush x:Key="AccentButtonBorderBrushPointerOver" Color="{StaticResource AccentHoverColor}" />
+
+  <!-- Windows' built-in icon font (Windows 10: MDL2, Windows 11: Fluent). -->
+  <FontFamily x:Key="IconFont">Segoe Fluent Icons, Segoe MDL2 Assets</FontFamily>
+</ResourceDictionary>
